@@ -1,0 +1,6 @@
+{
+  "name": "StudySpace — Your Personal School Organizer",
+  "description": "Aplikasi pengatur jadwal pelajaran, pengingat tugas, kalender akademik, catatan pelajaran, timer belajar Pomodoro, countdown ujian, dan to-do harian untuk pelajar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

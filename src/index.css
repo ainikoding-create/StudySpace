@@ -1,0 +1,117 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-canvas: #F8F8F2;
+    --bg-surface: #FFFFFF;
+    --bg-soft: #DDE5D2;
+    --bg-muted: #EFF3E8;
+    --accent-sage: #A3B18A;
+    --accent-dark: #344E41;
+    --accent-hover: #2A3F34;
+    --text-primary: #1F2E26;
+    --text-secondary: #4D6155;
+    --text-muted: #708276;
+    --border-hairline: rgba(52, 78, 65, 0.12);
+    --shadow-soft: 0 4px 20px -4px rgba(52, 78, 65, 0.06), 0 1px 4px -1px rgba(52, 78, 65, 0.04);
+  }
+
+  .theme-botanical {
+    --bg-canvas: #F3F6EE;
+    --bg-surface: #FFFFFF;
+    --bg-soft: #D3DFC5;
+    --bg-muted: #E8EFE0;
+    --accent-sage: #8FA376;
+    --accent-dark: #2B4236;
+    --accent-hover: #21342A;
+    --text-primary: #1A2921;
+    --text-secondary: #455A4E;
+    --text-muted: #687B70;
+    --border-hairline: rgba(43, 66, 54, 0.14);
+    --shadow-soft: 0 6px 24px -6px rgba(43, 66, 54, 0.08), 0 1px 4px -1px rgba(43, 66, 54, 0.05);
+  }
+
+  .dark {
+    --bg-canvas: #131B17;
+    --bg-surface: #1B2620;
+    --bg-soft: #26362E;
+    --bg-muted: #202D26;
+    --accent-sage: #8FA882;
+    --accent-dark: #A3B18A;
+    --accent-hover: #B5C39D;
+    --text-primary: #F1F5EE;
+    --text-secondary: #C1CEC3;
+    --text-muted: #8FA094;
+    --border-hairline: rgba(221, 229, 210, 0.12);
+    --shadow-soft: 0 6px 24px -6px rgba(0, 0, 0, 0.35), 0 1px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  html {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.study-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.study-soft-surface {
+  background-color: var(--bg-soft);
+}
+
+.study-muted-surface {
+  background-color: var(--bg-muted);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(163, 177, 138, 0.45);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(52, 78, 65, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
